@@ -8,12 +8,15 @@ import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
 
+    FragmentA mFragmentA;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+        switchToFragmentA();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -36,4 +39,15 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void switchToFragmentA() {
+        mFragmentA = (FragmentA) getFragmentManager().findFragmentByTag(FragmentA.TAG);
+        if (mFragmentA == null) {
+            mFragmentA = new FragmentA();
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.activity_main_container, mFragmentA, FragmentA.TAG)
+                    .commit();
+        }
+    }
+
 }
