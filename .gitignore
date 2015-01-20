@@ -26,3 +26,4 @@ proguard/
 *.log
 MyApp1/.idea
 *.iml
+MyApp1/gradle
