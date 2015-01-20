@@ -24,3 +24,5 @@ proguard/
 
 # Log Files
 *.log
+MyApp1/.idea
+*.iml
