@@ -27,3 +27,5 @@ proguard/
 MyApp1/.idea
 *.iml
 MyApp1/gradle
+MyApp2/.idea
+MyApp2/gradle
